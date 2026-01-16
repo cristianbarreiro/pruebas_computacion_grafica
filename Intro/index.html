@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computación Gráfica con Canvas</title>
+</head>
+<body>
+    <canvas></canvas>
+
+    <script type="text/javascript">
+
+        const canvas = document.querySelector('canvas');
+
+        canvas.width = canvas.height = 400;
+        
+        const context = canvas.getContext('2d');
+
+        context.translate(200, 200);
+
+        context.moveTo(0, 200);
+        context.lineTo(0, -200);
+        context.stroke();
+
+        context.moveTo(200, 0);
+        context.lineTo(-200, 0);
+        context.stroke();
+
+        context.arc( 0, 0, 20, 0, Math.PI * 2);
+        context.fill();
+
+    </script>
+</body>
+</html>
